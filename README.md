@@ -33,46 +33,42 @@ Uma aplicação web inteligente que utiliza a API do Google Gemini para criar fi
 
 🔑 Segurança: A chave de API é gerenciada de forma segura através de variáveis de ambiente, nunca sendo exposta no código-fonte.
 
-🔧 Como Executar o Projeto Localmente
+
+<br>
+
+## 🔧 Como Executar o Projeto Localmente
+
 Siga os passos abaixo para rodar a aplicação no seu ambiente de desenvolvimento:
 
-1. Clone o Repositório
 
-Bash
+### 1. Clone o Repositório
 
-git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
-2. Navegue até a Pasta do Projeto
+`git clone https://github.com/viniciusl17/gerador-fichas-tecnicas.git`
 
-Bash
 
-cd nome-do-seu-repositorio
-3. Instale as Dependências
+### 2. Navegue até a Pasta do Projeto
 
-Bash
+`cd nome-do-seu-repositorio`
 
-npm install
-4. Configure sua Chave de API
 
-Crie um arquivo chamado .env.local na raiz do projeto.
+### 3. Instale as Dependências
+
+`npm install`
+
+
+
+### 4. Configure sua Chave de API
+
+```
+Crie um arquivo chamado .env.local na raiz do projeto. 
 
 Dentro dele, adicione sua chave da API do Google Gemini, como no exemplo abaixo:
 
 REACT_APP_GEMINI_API_KEY=SUA_CHAVE_DE_API_SECRETA_AQUI
-5. Rode a Aplicação
+```
 
-Bash
+### 5. Rode a Aplicação
 
-npm start
-A aplicação estará disponível em http://localhost:3000.
+`npm start`
 
-🚀 Deploy na Vercel
-O deploy deste projeto é muito simples:
-
-Faça o push do seu código para um repositório no GitHub.
-
-Importe o projeto na Vercel a partir do seu repositório.
-
-Adicione a variável de ambiente REACT_APP_GEMINI_API_KEY no painel de configurações do projeto na Vercel.
-
-Pronto! A Vercel fará o build e o deploy automaticamente.
-
+`A aplicação estará disponível em http://localhost:3000.`
