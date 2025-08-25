@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# 📄 Gerador de Fichas Técnicas com IA
+Uma aplicação web inteligente que utiliza a API do Google Gemini para criar fichas técnicas profissionais a partir de um simples comando de texto. Desenvolvido com React, focado em uma experiência de usuário limpa, intuitiva e funcional.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+## 💻 Tecnologias Utilizadas
+<div style="display: inline_block">
+<img align="center" alt="Vini-Js" src="https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black">
+<img align="center" alt="Vini-Js" src="https://img.shields.io/badge/Google%20Gemini-8E75B2.svg?style=for-the-badge&logo=Google-Gemini&logoColor=white">
+<img align="center" alt="Vini-Js" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black">
+<img align="center" alt="Vini-Js" src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white">
+<img align="center" alt="Vini-Js" src="https://img.shields.io/badge/CSS-663399.svg?style=for-the-badge&logo=CSS&logoColor=white">
+</div>
 
-In the project directory, you can run:
+<br>
+<br>
 
-### `npm start`
+## ✨ Funcionalidades
+<br>
+🤖 Geração com Inteligência Artificial: Crie o rascunho de uma ficha técnica completa a partir de um simples prompt de texto (ex: "hambúrguer de costela").
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✏️ Edição Completa: Todos os campos gerados pela IA são 100% editáveis.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+📋 Lista de Ingredientes Dinâmica: Adicione, remova e edite ingredientes e suas quantidades com facilidade.
 
-### `npm test`
+📄 Exportação para PDF: Gere um PDF profissional com texto selecionável, formatado para uma folha A4 e com um rodapé personalizado.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+💾 Armazenamento Local: Salve múltiplas fichas técnicas no seu navegador para consulta e edição futura.
 
-### `npm run build`
+🎨 Tema Dark & Light: Alterne entre os modos claro e escuro para melhor conforto visual.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+📱 Design Responsivo: A interface se adapta perfeitamente a desktops, tablets e celulares.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🔑 Segurança: A chave de API é gerenciada de forma segura através de variáveis de ambiente, nunca sendo exposta no código-fonte.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🔧 Como Executar o Projeto Localmente
+Siga os passos abaixo para rodar a aplicação no seu ambiente de desenvolvimento:
 
-### `npm run eject`
+1. Clone o Repositório
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Bash
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+2. Navegue até a Pasta do Projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Bash
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+cd nome-do-seu-repositorio
+3. Instale as Dependências
 
-## Learn More
+Bash
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm install
+4. Configure sua Chave de API
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Crie um arquivo chamado .env.local na raiz do projeto.
 
-### Code Splitting
+Dentro dele, adicione sua chave da API do Google Gemini, como no exemplo abaixo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+REACT_APP_GEMINI_API_KEY=SUA_CHAVE_DE_API_SECRETA_AQUI
+5. Rode a Aplicação
 
-### Analyzing the Bundle Size
+Bash
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+npm start
+A aplicação estará disponível em http://localhost:3000.
 
-### Making a Progressive Web App
+🚀 Deploy na Vercel
+O deploy deste projeto é muito simples:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Faça o push do seu código para um repositório no GitHub.
 
-### Advanced Configuration
+Importe o projeto na Vercel a partir do seu repositório.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Adicione a variável de ambiente REACT_APP_GEMINI_API_KEY no painel de configurações do projeto na Vercel.
 
-### Deployment
+Pronto! A Vercel fará o build e o deploy automaticamente.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
