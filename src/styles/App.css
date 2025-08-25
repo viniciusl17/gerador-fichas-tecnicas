@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* --- THEME VARIABLES --- */
+:root {
+  /* Light Theme */
+  --primary-color: #008080;
+  --primary-hover: #006666;
+  --background-color: #F4F7F6;
+  --card-background: #FFFFFF;
+  --text-primary: #212121;
+  --text-secondary: #757575;
+  --border-color: #E0E0E0;
+  --input-background: #FFFFFF;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme='dark'] {
+  /* Dark Theme */
+  --primary-color: #009688; 
+  --primary-hover: #00a99d;
+  --background-color: #121212;
+  --card-background: #1E1E1E;
+  --text-primary: #E0E0E0;
+  --text-secondary: #BDBDBD;
+  --border-color: #424242;
+  --input-background: #2c2c2c;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* --- GLOBAL STYLES --- */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* --- HEADER --- */
+.app-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+.header-nav a {
+  color: white;
+  margin: 0 15px;
+  font-weight: 500;
+  position: relative;
+}
+.header-nav a.active {
+  text-decoration: underline;
+}
+
+/* --- BUTTONS & INPUTS --- */
+.primary-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+.primary-button:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+}
+.primary-button:disabled {
+  background-color: var(--text-secondary);
+  cursor: not-allowed;
+}
+
+.text-input, .textarea-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  background-color: var(--input-background);
+  color: var(--text-primary);
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.text-input:focus, .textarea-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 128, 128, 0.2);
+}
+
+/* --- FICHA TÉCNICA STYLES --- */
+.ficha-card {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  margin-top: 2rem;
+}
+.ficha-section {
+  margin-bottom: 1.5rem;
+}
+.ficha-section h3 {
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 8px;
+  margin-top: 0;
+  color: var(--text-primary);
+}
+.ficha-title-input {
+  font-size: 2rem;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+  width: 100%;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+.ficha-title-input:focus { outline: none; }
+
+/* --- LOADER STYLES --- */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: var(--primary-color);
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
